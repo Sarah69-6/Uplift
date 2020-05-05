@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Uplift.DataAccess1\Uplift.DataAccess1.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\Services\" />
+  </ItemGroup>
+
 </Project>
