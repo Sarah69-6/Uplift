@@ -10,6 +10,6 @@ namespace Uplift.DataAccess1.Data.Repository.IRepository
     {
         IEnumerable<SelectListItem> GetFrequencyListForDropdown();
 
-        void update(Frequency frequency);
+        void Update(Frequency frequency);
     }
 }
