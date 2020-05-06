@@ -71,7 +71,9 @@ body {
 }
 
 .search-background {
-    background-image: url('../images/services/pexels-photo-751378.jpeg');
+    background-image: url('../images/pexels-photo-64296.jpeg');
+    height: 100%;
+    width:100%;
 }
 
 .backgroundWhite {

@@ -79,9 +79,11 @@ namespace Uplift
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseCookiePolicy();
-            app.UseRouting();
 
+            app.UseRouting();
+           // dbInit.Initialize();
             app.UseAuthentication();
             app.UseAuthorization();
 
