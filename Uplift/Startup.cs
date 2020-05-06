@@ -1,12 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Uplift.DataAccess1.Data;
 using Microsoft.Extensions.Configuration;
@@ -16,6 +11,7 @@ using Uplift.DataAccess1.Data.Repository.IRepository;
 using Uplift.DataAccess1.Data.Repository;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Uplift.Utility;
+using Uplift.DataAccess.Data.Initializer;
 
 namespace Uplift
 {
@@ -52,7 +48,7 @@ namespace Uplift
 
             services.AddSingleton<IEmailSender, EmailSender>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-
+            services.AddScoped<IDbInitializer, DbInitializer>();
             services.AddSession(options =>
             {
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
@@ -64,7 +60,7 @@ namespace Uplift
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDbInitializer dbInit)
         {
             if (env.IsDevelopment())
             {
@@ -83,7 +79,7 @@ namespace Uplift
             app.UseCookiePolicy();
 
             app.UseRouting();
-           // dbInit.Initialize();
+            dbInit.Initialize();
             app.UseAuthentication();
             app.UseAuthorization();
 
