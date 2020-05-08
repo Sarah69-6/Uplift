@@ -1,5 +1,4 @@
-﻿
-var dataTable;
+﻿var dataTable;
 
 $(document).ready(function () {
     loadDataTable();
@@ -15,9 +14,9 @@ function loadDataTable() {
         },
         "columns": [
             { "data": "name", "width": "20%" },
-            { "data": "price", "width": "20%" },
             { "data": "category.name", "width": "20%" },
-            { "data": "frequency.frequencyCount", "width": "20%" },
+            { "data": "price", "width": "10%" },
+            { "data": "frequency.frequencyCount", "width": "10%" },
             {
                 "data": "id",
                 "render": function (data) {

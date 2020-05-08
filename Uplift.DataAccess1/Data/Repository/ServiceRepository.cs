@@ -7,7 +7,7 @@ using Uplift.DataAccess1.Data.Repository;
 using Uplift.DataAccess1.Data.Repository.IRepository;
 using Uplift.Models;
 
-namespace Uplift.DataAccess.Data.Repository
+namespace Uplift.DataAccess1.Data.Repository
 {
     public class ServiceRepository : Repository<Service>, IServiceRepository
     {

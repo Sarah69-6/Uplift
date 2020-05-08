@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Uplift.DataAccess.Data.Repository.IRepository;
+using Uplift.DataAccess1.Data.Repository.IRepository;
 
 namespace Uplift.DataAccess1.Data.Repository.IRepository
 {

@@ -94,7 +94,7 @@ namespace Uplift.Areas.Customer.Controllers
                     };
 
                     _unitOfWork.OrderDetails.Add(orderDetails);
-
+                  
                 }
                 _unitOfWork.Save();
                 HttpContext.Session.SetObject(SD.SessionCart, new List<int>());
@@ -106,6 +106,7 @@ namespace Uplift.Areas.Customer.Controllers
         {
             return View(id);
         }
+
 
         public IActionResult Remove(int serviceId)
         {

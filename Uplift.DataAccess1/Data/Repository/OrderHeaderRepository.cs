@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Uplift.DataAccess.Data.Repository.IRepository;
-using Uplift.DataAccess1.Data;
-using Uplift.DataAccess1.Data.Repository;
+﻿using System.Linq;
+using Uplift.DataAccess1.Data.Repository.IRepository;
 using Uplift.Models;
 
-namespace Uplift.DataAccess.Data.Repository
+namespace Uplift.DataAccess1.Data.Repository
 {
     public class OrderHeaderRepository : Repository<OrderHeader>, IOrderHeaderRepository
     {

@@ -5,7 +5,7 @@ using System.Text;
 using Uplift.DataAccess1.Data.Repository.IRepository;
 using Uplift.Models;
 
-namespace Uplift.DataAccess.Data.Repository.IRepository
+namespace Uplift.DataAccess1.Data.Repository.IRepository
 {
     public interface IOrderDetailsRepository : IRepository<OrderDetails>
     {
